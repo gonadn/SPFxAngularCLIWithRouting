@@ -13,10 +13,21 @@ import {
   templateUrl: './app.component.html'
 })
 export class AppComponent {
+  //Test
   @Input() description = 'Angular';
-  // title = 'Angular';
+  public heroes = [
+    {id: 1, name:'Superman'},
+    {id: 2, name:'Batman'},
+    {id: 5, name:'BatGirl'},
+    {id: 3, name:'Robin'},
+    {id: 4, name:'Flash'}
+  ];
+  test:string;
+  data:any[];
   constructor(elm: ElementRef) {
     this.description = elm.nativeElement.getAttribute('description');
     console.log('******COMPONENT******');
+    this.data = this.heroes;
+    console.log(this.data );
   }
 }
