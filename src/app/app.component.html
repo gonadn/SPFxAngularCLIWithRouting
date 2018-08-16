@@ -12,5 +12,17 @@
 </header>
 
 <main>
-   <router-outlet></router-outlet>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Index</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let hero of data">
+                <td>{{hero.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr/>
+    <router-outlet></router-outlet>
 </main>
